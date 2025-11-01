@@ -2,8 +2,6 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 
-// const isDev = process.env.NODE_ENV === 'development';
-// const isLocalServe = process.env.LOCAL_SERVE === 'true';
 
 const config: Config = {
   title: 'Flutter Interview Prep',
@@ -15,10 +13,10 @@ const config: Config = {
   organizationName: 'narayann7',
   projectName: 'flutter-interview-prep',
   deploymentBranch: 'gh-pages',
-
   trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
+
 
   i18n: {
     defaultLocale: 'en',
@@ -51,12 +49,13 @@ const config: Config = {
     image: 'img/social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
+      defaultMode: 'dark',
     },
     navbar: {
       title: 'Flutter Interview Prep',
       logo: {
         alt: 'Flutter Interview Prep Logo',
-        src: 'img/logo.svg',
+        src: 'img/lp_logo.png',
       },
       items: [
         {
@@ -67,7 +66,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
+
       links: [
         {
           title: 'Docs',
@@ -81,11 +80,12 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Narayann. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Narayann`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['dart', 'java', 'graphql'],
     },
     metadata: [
       {

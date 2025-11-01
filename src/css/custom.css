@@ -1,30 +1,172 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* ===================================================
+   Vesper Golden Theme — Light + Dark Modes
+   =================================================== */
 
-/* You can override the default Infima variables here. */
+/* ===== Light Mode ===== */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #c58f00;
+  --ifm-color-primary-dark: #b07e00;
+  --ifm-color-primary-darker: #9d7100;
+  --ifm-color-primary-darkest: #7b5900;
+  --ifm-color-primary-light: #ffb300;
+  --ifm-color-primary-lighter: #ffcc4d;
+  --ifm-color-primary-lightest: #ffefcc;
+
+  --ifm-background-color: #fffdf6;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-font-color-base: #1a1a1a;
+  --ifm-color-secondary: #5a5959;
+  --ifm-color-emphasis-100: #e8e8e8;
+  --ifm-color-emphasis-200: #dadada;
+
+  --ifm-navbar-background-color: #fffdf6;
+  --ifm-footer-background-color: #fffdf6;
+  --ifm-navbar-link-hover-color: #c58f00;
+  --ifm-link-color: #c58f00;
+  --ifm-link-hover-color: #ffb300;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ===== Dark Mode ===== */
 [data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #ffbf3b;
+  --ifm-color-primary-dark: #e0a829;
+  --ifm-color-primary-darker: #c99421;
+  --ifm-color-primary-darkest: #a87519;
+  --ifm-color-primary-light: #ffcfa8;
+  --ifm-color-primary-lighter: #ffe8c4;
+  --ifm-color-primary-lightest: #fff9f2;
+
+  --ifm-background-color: #0a0908;
+  --ifm-background-surface-color: #111;
+  --ifm-font-color-base: #ffffff;
+  --ifm-color-secondary: #afaca7;
+  --ifm-color-emphasis-100: #232323;
+  --ifm-color-emphasis-200: #1a1a1a;
+
+  --ifm-navbar-background-color: #0a0908;
+  --ifm-footer-background-color: #0a0908;
+  --ifm-navbar-link-hover-color: #ffcfa8;
+  --ifm-link-color: #ffbf3b;
+  --ifm-link-hover-color: #ffcfa8;
+}
+
+/* ===== Shared Styling ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.menu__link:hover {
+  color: var(--ifm-link-hover-color) !important;
+}
+
+.card {
+  background-color: var(--ifm-background-surface-color) !important;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.2s ease-in-out;
+}
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px);
+}
+
+/* Code blocks */
+pre,
+code {
+  background-color: var(--ifm-color-emphasis-100) !important;
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+  background-color: #161616 !important;
+  border-color: #232323;
+}
+
+/* Buttons */
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-background-color);
+  border: none;
+}
+.button--primary:hover {
+  background-color: var(--ifm-link-hover-color);
+  color: var(--ifm-background-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 4px;
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #343434;
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #ffbf3b;
+}
+
+/* =====================================
+   🦶 Footer Styling — Vesper Golden Theme (Works with Docusaurus ColorMode)
+   ===================================== */
+
+/* -------- Base Footer Colors -------- */
+:root {
+  --ifm-footer-background-color: #fffdf6;
+  --ifm-footer-color: #1a1a1a;
+  --ifm-footer-title-color: #c58f00;
+  --ifm-footer-link-color: #5a5959;
+  --ifm-footer-link-hover-color: #c58f00;
+  --ifm-footer-border-color: #e8e8e8;
+}
+
+/* -------- Dark Mode -------- */
+[data-theme="dark"] {
+  --ifm-footer-background-color: #0a0908;
+  --ifm-footer-color: #f5f5f5;
+  --ifm-footer-title-color: #ffbf3b;
+  --ifm-footer-link-color: #afaca7;
+  --ifm-footer-link-hover-color: #ffcfa8;
+  --ifm-footer-border-color: #1a1a1a;
+}
+
+/* -------- Apply Styling -------- */
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-color);
+  border-top: 1px solid var(--ifm-footer-border-color);
+  padding: 2rem 0;
+}
+
+.footer__title {
+  color: var(--ifm-footer-title-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer__link-item {
+  color: var(--ifm-footer-link-color);
+  transition: color 0.2s ease;
+  font-weight: 400;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-footer-link-hover-color);
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--ifm-footer-border-color);
+  color: var(--ifm-footer-link-color);
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
 }
