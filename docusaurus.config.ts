@@ -2,54 +2,62 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 
-
-const coreDomainUrl = "https://narayann.dev"
-const baseGitHubUrl = 'https://github.com/narayann7/';
-
 const config: Config = {
   title: 'Flutter Interview Prep',
-  tagline: 'Prepare for your Flutter interviews with curated questions and answers.',
+  tagline: 'Curated Flutter interview questions and answers.',
   favicon: 'img/favicon.ico',
   future: { v4: true },
-  url: coreDomainUrl,
+  url: 'https://narayann7.github.io',
   baseUrl: '/',
   organizationName: 'narayann7',
   projectName: 'flutter-interview-prep',
-  onBrokenLinks: 'throw',
+  deploymentBranch: 'gh-pages',
+
+  trailingSlash: false,
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
   presets: [
     [
       'classic',
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: ({ versionDocsDirPath, docPath }) =>
-            `${baseGitHubUrl}/flutter-interview-prep/blob/main/${versionDocsDirPath}/${docPath}`,
+          editUrl:
+            'https://github.com/narayann7/flutter-interview-prep/edit/main/',
         },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          filename: 'sitemap.xml',
         },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Flutter Interview Prep',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Flutter Interview Prep Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          href: `${baseGitHubUrl}/flutter-interview-prep`,
+          href: 'https://github.com/narayann7/flutter-interview-prep',
           label: 'GitHub',
           position: 'right',
         },
@@ -60,24 +68,33 @@ const config: Config = {
       links: [
         {
           title: 'Docs',
-          items: [{ label: 'Tutorial', to: '/docs/intro' }],
+          items: [{ label: 'Start', to: '/docs/intro' }],
         },
         {
           title: 'Community',
           items: [
-            { label: 'Stack Overflow', href: 'https://stackoverflow.com/questions/tagged/docusaurus' },
-            { label: 'Discord', href: 'https://discordapp.com/invite/docusaurus' },
-            { label: 'X', href: 'https://x.com/docusaurus' },
+            { label: 'Stack Overflow', href: 'https://stackoverflow.com/questions/tagged/flutter' },
+            { label: 'Twitter', href: 'https://x.com/docusaurus' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Narayann. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  } satisfies Preset.ThemeConfig,
+    metadata: [
+      {
+        name: 'description',
+        content: 'Prepare for your Flutter interviews with curated questions and answers.',
+      },
+      {
+        name: 'keywords',
+        content: 'Flutter, Dart, interview questions, SDE, coding prep',
+      },
+    ],
+  },
 };
 
 export default config;
