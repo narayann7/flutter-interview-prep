@@ -70,13 +70,6 @@ const config: Config = {
             { label: 'X', href: 'https://x.com/docusaurus' },
           ],
         },
-        {
-          title: 'More',
-          items: [
-            { label: 'Blog', to: '/blog' },
-            { label: 'GitHub', href: `${baseGitHubUrl}/flutter-interview-prep` },
-          ],
-        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
