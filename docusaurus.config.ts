@@ -5,16 +5,19 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 const coreDomainUrl = "https://narayann.dev"
 const baseGitHubUrl = 'https://github.com/narayann7/';
-
 const config: Config = {
   title: 'Flutter Interview Prep',
   tagline: 'Prepare for your Flutter interviews with curated questions and answers.',
   favicon: 'img/favicon.ico',
   future: { v4: true },
-  url: coreDomainUrl,
-  baseUrl: '/',
+
+  // ✅ For GitHub Pages
+  url: 'https://narayann7.github.io',
+  baseUrl: '/flutter-interview-prep/',
+
   organizationName: 'narayann7',
   projectName: 'flutter-interview-prep',
+
   onBrokenLinks: 'throw',
   i18n: {
     defaultLocale: 'en',
@@ -27,7 +30,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: ({ versionDocsDirPath, docPath }) =>
-            `${baseGitHubUrl}/flutter-interview-prep/blob/main/${versionDocsDirPath}/${docPath}`,
+            `${baseGitHubUrl}flutter-interview-prep/blob/main/${versionDocsDirPath}/${docPath}`,
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -35,21 +38,20 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Flutter Interview Prep',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Flutter Interview Prep Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          href: `${baseGitHubUrl}/flutter-interview-prep`,
+          href: `${baseGitHubUrl}flutter-interview-prep`,
           label: 'GitHub',
           position: 'right',
         },
@@ -60,7 +62,7 @@ const config: Config = {
       links: [
         {
           title: 'Docs',
-          items: [{ label: 'Tutorial', to: '/docs/intro' }],
+          items: [{ label: 'Intro', to: '/docs/intro' }],
         },
         {
           title: 'Community',
@@ -71,7 +73,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Narayan N. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
@@ -79,5 +81,3 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 };
-
-export default config;
