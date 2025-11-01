@@ -2,13 +2,15 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const config: Config = {
   title: 'Flutter Interview Prep',
   tagline: 'Curated Flutter interview questions and answers.',
   favicon: 'img/favicon.ico',
   future: { v4: true },
-  url: 'https://narayann7.github.io',
-  baseUrl: '/',
+  url: 'https://narayann.dev',
+  baseUrl: isDev ? '/' : '/flutter-interview-prep/',
   organizationName: 'narayann7',
   projectName: 'flutter-interview-prep',
   deploymentBranch: 'gh-pages',
