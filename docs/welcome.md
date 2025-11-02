@@ -1,14 +1,14 @@
 ---
-id: intro
-title: 🚀 Welcome
+id: welcome
+title: Welcome
 sidebar_position: 1
 ---
 
-# 🦋 Flutter Interview Prep
+# 🚀 Flutter Interview Prep
 
-Welcome to **Flutter Interview Prep** — your complete open-source guide to mastering **Flutter and Dart interviews**.
+Welcome to **Flutter Interview Prep** your complete open-source guide to mastering **Flutter and Dart interviews**.
 
-Whether you're preparing for your **first developer role** or aiming for **SDE2+ positions**, this guide helps you strengthen concepts, review patterns, and build confidence for real-world Flutter questions.
+Whether you’re a beginner or an experienced developer, this guide helps you reinforce key Flutter concepts, refine your problem-solving approach, and prepare confidently for real interview scenarios.
 
 ---
 
@@ -16,11 +16,11 @@ Whether you're preparing for your **first developer role** or aiming for **SDE2+
 
 This guide is structured to give you a **progressive learning and interview experience**:
 
-- 🧩 **Flutter Basics** — Widgets, layouts, navigation, and state management
-- ⚙️ **Dart Core** — Language fundamentals, async, collections, and null safety
-- 🧠 **Interview Q&A** — Curated conceptual and coding interview questions
-- 🧱 **System Design (Mobile)** — Architecture, scalability, caching, and API design
-- 🧭 **Practical Guides** — Best practices, real project scenarios, and patterns
+- 🧩 **Flutter Basics** : Widgets, layouts, navigation, and state management
+- ⚙️ **Dart Core** : Language fundamentals, async, collections, and null safety
+- 🧠 **Interview Q&A** : Curated conceptual and coding interview questions
+- 🧱 **System Design (Mobile)** : Architecture, scalability, caching, and API design
+- 🧭 **Practical Guides** : Best practices, real project scenarios, and patterns
 
 Each section includes **code snippets**, **explanations**, and **interview-style questions** for hands-on prep.
 
@@ -33,7 +33,7 @@ This project powers both:
 - 📚 A **public GitHub repository** with Markdown-based content
 - 🌐 A **Docusaurus-powered website** for easy reading, navigation, and search
 
-> You can explore, contribute, or host your own fork — everything is open-source.
+> You can explore, contribute, or host your own fork everything is open-source.
 
 ---
 
@@ -43,7 +43,7 @@ If you’d like to run this website on your local machine:
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/flutter-interview-prep.git
+git clone  https://github.com/narayann7/flutter-interview-prep.git
 cd flutter-interview-prep
 
 # Install dependencies

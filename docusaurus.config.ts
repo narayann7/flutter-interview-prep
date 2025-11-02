@@ -47,6 +47,7 @@ const config: Config = {
       defaultMode: 'dark',
     },
     navbar: {
+
       title: 'Flutter Interview Prep',
       logo: {
         alt: 'Flutter Interview Prep Logo',
