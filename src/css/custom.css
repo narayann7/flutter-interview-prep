@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+
 /* ===================================================
-   Vesper Golden Theme — Light + Dark Modes
+   Vesper Golden Theme — Light + Dark (Sen Font)
    =================================================== */
 
-/* ===== Light Mode ===== */
 :root {
+  --ifm-font-family-base: "Sen", sans-serif;
+
+  /* ===== Light Mode ===== */
   --ifm-color-primary: #c58f00;
   --ifm-color-primary-dark: #b07e00;
   --ifm-color-primary-darker: #9d7100;
@@ -20,7 +24,6 @@
   --ifm-color-emphasis-200: #dadada;
 
   --ifm-navbar-background-color: #fffdf6;
-  --ifm-footer-background-color: #fffdf6;
   --ifm-navbar-link-hover-color: #c58f00;
   --ifm-link-color: #c58f00;
   --ifm-link-hover-color: #ffb300;
@@ -44,13 +47,18 @@
   --ifm-color-emphasis-200: #1a1a1a;
 
   --ifm-navbar-background-color: #0a0908;
-  --ifm-footer-background-color: #0a0908;
   --ifm-navbar-link-hover-color: #ffcfa8;
   --ifm-link-color: #ffbf3b;
   --ifm-link-hover-color: #ffcfa8;
 }
 
 /* ===== Shared Styling ===== */
+body {
+  font-family: var(--ifm-font-family-base);
+  color: var(--ifm-font-color-base);
+  background-color: var(--ifm-background-color);
+}
+
 h1,
 h2,
 h3,
@@ -58,7 +66,7 @@ h4,
 h5,
 h6 {
   color: var(--ifm-color-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .menu__link:hover {
@@ -114,59 +122,14 @@ code {
   background: #ffbf3b;
 }
 
-/* =====================================
-   🦶 Footer Styling — Vesper Golden Theme (Works with Docusaurus ColorMode)
-   ===================================== */
-
-/* -------- Base Footer Colors -------- */
-:root {
-  --ifm-footer-background-color: #fffdf6;
-  --ifm-footer-color: #1a1a1a;
-  --ifm-footer-title-color: #c58f00;
-  --ifm-footer-link-color: #5a5959;
-  --ifm-footer-link-hover-color: #c58f00;
-  --ifm-footer-border-color: #e8e8e8;
-}
-
-/* -------- Dark Mode -------- */
-[data-theme="dark"] {
-  --ifm-footer-background-color: #0a0908;
-  --ifm-footer-color: #f5f5f5;
-  --ifm-footer-title-color: #ffbf3b;
-  --ifm-footer-link-color: #afaca7;
-  --ifm-footer-link-hover-color: #ffcfa8;
-  --ifm-footer-border-color: #1a1a1a;
-}
-
-/* -------- Apply Styling -------- */
-.footer {
-  background-color: var(--ifm-footer-background-color);
-  color: var(--ifm-footer-color);
-  border-top: 1px solid var(--ifm-footer-border-color);
-  padding: 2rem 0;
-}
-
-.footer__title {
-  color: var(--ifm-footer-title-color);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.footer__link-item {
-  color: var(--ifm-footer-link-color);
-  transition: color 0.2s ease;
-  font-weight: 400;
-}
-
-.footer__link-item:hover {
-  color: var(--ifm-footer-link-hover-color);
-}
-
+/* ===== Completely Remove Footer ===== */
+.footer,
+.footer__links,
 .footer__bottom {
-  border-top: 1px solid var(--ifm-footer-border-color);
-  color: var(--ifm-footer-link-color);
-  padding-top: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
 }

@@ -1,0 +1,2 @@
+- create cover images for seo
+- update docusaurus config with og:image and og:url
