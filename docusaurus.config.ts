@@ -46,6 +46,8 @@ const config: Config = {
       respectPrefersColorScheme: true,
       defaultMode: 'dark',
     },
+
+
     navbar: {
 
       title: 'Flutter Interview Prep',
