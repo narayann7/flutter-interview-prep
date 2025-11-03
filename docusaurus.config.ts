@@ -47,6 +47,12 @@ const config: Config = {
       defaultMode: 'dark',
     },
 
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
+
 
     navbar: {
 
@@ -56,6 +62,11 @@ const config: Config = {
         src: 'img/flutter/icon_flutter.svg',
       },
       items: [
+        {
+          to: 'docs/tags',
+          label: 'Tags',
+          position: 'left',
+        },
         {
           href: links.githubLink + '/flutter-interview-prep',
           label: 'GitHub',
@@ -91,11 +102,11 @@ const config: Config = {
 
       // --- Open Graph (for social sharing) ---
       { property: 'og:title', content: 'Flutter Interview Prep Guide' },
-      {
-        property: 'og:description',
-        content:
-          'Curated Flutter interview questions and detailed answers for aspiring SDE2 and mobile developers.',
-      },
+      // {
+      //   property: 'og:description',
+      //   content:
+      //     'Curated Flutter interview questions and detailed answers for aspiring SDE2 and mobile developers.',
+      // },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: links.hostedCoreURL },
       // { property: 'og:image', content: 'https://narayann.dev/img/flutter-cover.png' },
